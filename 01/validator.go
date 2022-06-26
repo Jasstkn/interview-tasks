@@ -1,6 +1,7 @@
 package validator
 
 import (
+	"regexp"
 	"strconv"
 	"strings"
 )
@@ -36,4 +37,13 @@ func IPValidator(input string) (bool, error) {
 	}
 
 	return decision, nil
+}
+
+func IPValidatorRegexp(input string) bool {
+	pattern := "^(((1[0-9]{0,2})|(2[0-5]{0,2})|0)[.]){3}((1[0-9]{0,2})|(2[0-5]{0,2})|0)$"
+	result, ok := regexp.MatchString(pattern, input)
+	if ok != nil {
+		panic("invalid regex: " + pattern)
+	}
+	return result
 }
