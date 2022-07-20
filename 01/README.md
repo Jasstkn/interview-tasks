@@ -4,7 +4,7 @@ Write validator for IPv4 address.
 
 ## Implementations
 
-1. Via `for` cycle + few validation `if/else`
+1. Via `for` cycle + few validations with `if/else`
 2. Regular expressions
 
 ## Tests
