@@ -15,7 +15,7 @@ func IPValidator(input string) (bool, error) {
 	inputOctets := strings.Split(input, ".")
 
 	// invalid if input is empty string or has >= 4 octets
-	if len(input) == 0 || len(inputOctets) != 4 {
+	if len(inputOctets) != 4 {
 		return false, nil
 	}
 
