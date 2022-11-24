@@ -19,8 +19,6 @@ func IPValidator(input string) (bool, error) {
 		return false, nil
 	}
 
-	decision := true
-
 	for _, octet := range inputOctets {
 		if hasLeadingZeros(octet) {
 			return false, nil
@@ -32,11 +30,11 @@ func IPValidator(input string) (bool, error) {
 		}
 
 		if octetInt < 0 || octetInt > 255 {
-			decision = false
+			return false, nil
 		}
 	}
 
-	return decision, nil
+	return true, nil
 }
 
 func IPValidatorRegexp(input string) bool {

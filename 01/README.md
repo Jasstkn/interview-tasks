@@ -6,6 +6,7 @@ Write validator for IPv4 address.
 
 1. Via `for` cycle + few validations with `if/else`
 2. Regular expressions
+3. Python
 
 ## Tests
 
@@ -15,6 +16,12 @@ Run
 $ go test validator.go validator_test.go
 
 ok      command-line-arguments  0.579s
+```
+
+or for Python
+
+```bash
+python3 -m unittest test_validator.py -v
 ```
 
 ## Benchmarks
